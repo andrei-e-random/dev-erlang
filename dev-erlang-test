@@ -1,8 +1,0 @@
-#!/bin/sh
-
-docker run \
-        -it \
-        --rm \
-        -v "$(pwd):/project" \
-        -v "${HOME}/.emacs.d/":/home/user/.emacs.d/ \
-        andreierandom/dev-erlang:test

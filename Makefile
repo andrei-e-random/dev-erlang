@@ -1,24 +1,9 @@
-IMAGE_NAME := andreierandom/dev-erlang
-EXECUTABLE := dev-erlang
-INSTALL_PATH := /usr/local/bin
-
-
-install: 
-	cp $(EXECUTABLE) $(INSTALL_PATH)/
-
-uninstall:
-	rm $(INSTALL_PATH)/$(EXECUTABLE)
+IMAGE_NAME := andreierandom/dev-erlang:test
 
 test-image:
-	docker build --tag $(IMAGE_NAME):test .
+	docker build --tag $(IMAGE_NAME) .
 
-test-clean:
-	docker image rm $(IMAGE_NAME):test
-
-test-install: 
-	cp $(EXECUTABLE)-test $(INSTALL_PATH)/
-
-test-uninstall:
-	rm $(INSTALL_PATH)/$(EXECUTABLE)-test
+test-image-clean:
+	docker image rm $(IMAGE_NAME)
 
 
