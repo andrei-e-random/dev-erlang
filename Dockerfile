@@ -20,4 +20,4 @@ ENV ERL_FLAGS="-config app.config"
 
 # TODO: Should I install the erlang docs as well?
 
-CMD ["sleep", "infinity"]
+CMD ["emacs"]
